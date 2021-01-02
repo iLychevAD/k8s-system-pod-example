@@ -15,15 +15,6 @@ spec:
     spec:
       hostNetwork: true
       hostPID: true
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: kubernetes.io/hostname
-                operator: In
-                values:
-                - ip-10-10-10-251.eu-central-1.compute.internal
       containers:
       - image: amazonlinux:2
         command:
